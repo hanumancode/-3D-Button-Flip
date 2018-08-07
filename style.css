@@ -22,21 +22,41 @@ a {
 }
 
 a:before {
-    position: absolute;
     content: attr(data-text);
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-    background: #ff005e;
+    background: #7647a2;
     color: #fff;
     transition: 0.5s;
     transform-origin: bottom;
-    transform: translateY(-100%) rotateX(45deg);
+    transform: translateY(-100%) rotateX(90deg);
 
 }
 
 a:hover:before {
-    transform: translateY(-100%) rotateX(90deg);
+    transform: translateY(0) rotateX(0deg);
+}
+
+a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #885ead;
+    color: #fff;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0deg);
+
+}
+
+a:hover:after {
+    transform: translateY(100%) rotateX(90deg);
 }
